@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("Arimo,Miranda_Sans,Roboto/Roboto/Roboto-VariableFont_wdth\,wght.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 180px 1fr;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: 
+    "sidebar head"
+    "sidebar main";
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: head;
+    background-color: white;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #4A93D3;
+    color: white;
+    padding: 10px 10px;
+
+    display: grid;
+    grid-template-rows: 90px 30px 240px 30px auto;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.logo > svg {
+    width: 60px;
+    height: 60px;
+    fill: white;
+}
+
+.f-navbar {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: repeat(6, 40px);
+    align-items: center;
+    column-gap: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.icon {
+    fill: white;
+    width: 30px;
+    height: 30px;
+    justify-self:center;
+}
+
+.s-navbar {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: repeat(3, 40px);
+    align-items: center;
+    column-gap: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.main {
+    grid-area: main;
+    background-color: #E3E8F0;
+}
+
