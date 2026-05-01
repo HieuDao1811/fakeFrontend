@@ -1,0 +1,28 @@
+.product {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.product__item {
+  width: 23%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.product__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.product__new-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: green;
+}
+
+.product__old-price {
+  text-decoration: line-through;
+}

@@ -1,0 +1,20 @@
+.layout-default__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 10px 30px;
+    background-color: orange;
+    font-size: 20px;
+}
+
+.layout-default__footer {
+    background-color: orange;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
