@@ -1,7 +1,6 @@
 import { Link, Outlet } from "react-router";
-import Home from "../../pages/Home";
-import Cart from "../../pages/Cart";
 import "./LayoutDefault.css";
+import CartMini from "../../components/CartMini";
 
 function LayoutDefault() {
   return (
@@ -9,7 +8,7 @@ function LayoutDefault() {
       <div className="layout-default">
         <header className="layout-default__header">
           <Link to="/">Logo</Link>
-          <Link to="/cart">Cart(1)</Link>
+          <CartMini/>
         </header>
         <Outlet />
         <footer className="layout-default__footer">Copyright by Hieu</footer>

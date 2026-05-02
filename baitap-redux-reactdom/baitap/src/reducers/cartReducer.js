@@ -1,5 +1,4 @@
 export const cartReducer = (state = [], action) => {
-  const newState = [...state];
   switch(action.type) {
     case "ADD_TO_CART":
       return[
@@ -11,9 +10,17 @@ export const cartReducer = (state = [], action) => {
         }
       ];
     case "UPDATE_QUANTITY":
-      const itemUpdate = newState.find(item => action.id===item.id);
-      itemUpdate.quantity++;
-      console.log(itemUpdate.quantity);
+      return state.map(item => {
+        if(item.id === action.id) {
+          return {
+            ...item,
+            quantity: item.quantity+1
+          }
+        }
+        else {
+          return item;
+        }
+      })
     default:
       return state;
   }
